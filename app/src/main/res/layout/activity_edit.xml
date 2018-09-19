@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_edit"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="beijing.huimei.huimeiup.ui.EditActivity">
+    <RelativeLayout
+        android:background="#ac0000"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <TextView
+            android:id="@+id/tv"
+            android:textColor="#fff"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="出厂日期" />
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/date"
+                    android:layout_marginLeft="103dp"
+                    android:layout_toRightOf="@+id/date"
+                    android:text="点击选择出厂日期" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="商品名称" />
+
+                <EditText
+                    android:id="@+id/editText_name"
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/filebg"
+                    android:gravity="top"
+                    android:hint="输入内容"
+                    android:padding="3dp"
+                    android:textSize="10sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/introduce"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="商品描述" />
+
+                <EditText
+                    android:id="@+id/editText_context"
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/filebg"
+                    android:gravity="top"
+                    android:hint="输入内容"
+                    android:padding="3dp"
+                    android:textSize="10sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/busynesspirce"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="商户结算价格" />
+
+                <EditText
+                    android:id="@+id/editText_busynessprice"
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/filebg"
+                    android:gravity="top"
+                    android:hint="输入内容"
+                    android:padding="3dp"
+                    android:textSize="10sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/userbuyprice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="用户购买价格" />
+
+                <EditText
+                    android:id="@+id/editText_userbuy"
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/filebg"
+                    android:gravity="top"
+                    android:hint="输入内容"
+                    android:padding="3dp"
+                    android:textSize="10sp" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="适用人群"
+                android:textColor="#05fb6f" />
+
+            <beijing.huimei.huimeiup.ui.custom.HozRecycleView
+                android:id="@+id/hozrv_sex"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" />
+
+            <beijing.huimei.huimeiup.ui.custom.HozRecycleView
+                android:id="@+id/hozrv_attribute"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" />
+
+            <beijing.huimei.huimeiup.ui.custom.HozRecycleView
+                android:id="@+id/hozrv_kind"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" />
+
+            <beijing.huimei.huimeiup.ui.custom.HozRecycleView
+                android:id="@+id/hozrv_season"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" />
+
+            <beijing.huimei.huimeiup.ui.custom.HozRecycleView
+                android:id="@+id/hozrv_sytle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" />
+
+            <beijing.huimei.huimeiup.ui.custom.HozRecycleView
+                android:id="@+id/hozrv_mianliao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" />
+
+            <beijing.huimei.huimeiup.ui.custom.HozRecycleView
+                android:id="@+id/hozrv_chengfen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" />
+
+            <beijing.huimei.huimeiup.ui.custom.HozRecycleView
+                android:id="@+id/hozrv_caizhi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" />
+
+            <beijing.huimei.huimeiup.ui.custom.HozRecycleView
+                android:id="@+id/hozrv_tuan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" />
+
+            <beijing.huimei.huimeiup.ui.custom.HozRecycleView
+                android:id="@+id/hozrv_yichang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" />
+
+            <beijing.huimei.huimeiup.ui.custom.HozManyRecycleView
+                android:id="@+id/hozrv_color"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" />
+
+            <beijing.huimei.huimeiup.ui.custom.HozManyRecycleView
+                android:id="@+id/hozrv_xinghao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" />
+
+            <LinearLayout
+                android:id="@+id/ll_cucun"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_next"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="下一个" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

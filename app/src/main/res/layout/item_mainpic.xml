@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="150dp"
+    android:background="#acffcd"
+    android:id="@+id/ll"
+    android:gravity="center_horizontal"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/iv_picmain"
+        android:layout_width="150dp"
+        android:layout_height="150dp" />
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/tv_namemain"
+        android:text="属性选择"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="beijing.huimei.huimeiup.ui.ExcelActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <TextView
+            android:id="@+id/excel"
+            android:layout_centerInParent="true"
+            android:text="编辑excel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_excelnext"
+            android:padding="10dp"
+            android:layout_alignBaseline="@+id/excel"
+            android:layout_alignParentEnd="true"
+            android:text="下一步"
+            android:textColor="@color/colorPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_alignParentBottom="true"
+            android:background="#4a4848"
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+    </RelativeLayout>
+    <beijing.huimei.huimeiup.ui.custom.SyncHorizontalScrollView
+        android:id="@+id/headers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#000"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+
+    </beijing.huimei.huimeiup.ui.custom.SyncHorizontalScrollView>
+
+    <beijing.huimei.huimeiup.ui.custom.SyncHorizontalScrollView
+        android:id="@+id/contents"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
+    </beijing.huimei.huimeiup.ui.custom.SyncHorizontalScrollView>
+
+</LinearLayout>
